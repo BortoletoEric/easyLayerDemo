@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 34
+
+
+    defaultConfig {
+        applicationId "br.com.gertec.easylayer.app"
+        minSdkVersion 22
+        targetSdkVersion 34
+        versionCode 8
+        versionName "2.1.4"
+        applicationId "opencv.org"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        AndroidEnhancedDev {
+            storeFile file("AndroidDefaultDev_Enhanced.jks")
+            storePassword 'GertecDefaultNDevelopmentKeyStore'
+            keyAlias 'androidenhanceddev'
+            keyPassword 'Gertec'
+        }
+    }
+
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.AndroidEnhancedDev
+        }
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.AndroidEnhancedDev
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    namespace 'br.com.gertec.easylayer.app'
+}
+
+
+dependencies {
+//    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar']) //Load all aars and jars from libs folder
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+
+    // LIBS
+    implementation files('libs/libgedi-0.18.12-gpos760-payment-release.aar')
+
+    implementation files('libs/android-easy-layer-v2.1.4-debug.aar')
+
+    // TESTS
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

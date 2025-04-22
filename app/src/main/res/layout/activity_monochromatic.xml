@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context="br.com.gertec.easylayer.app.MonochromaticActivity">
+
+    <TextView
+        android:id="@+id/txtOrigin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_original"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+
+        app:layout_constraintEnd_toEndOf="@id/imgEntry"
+        app:layout_constraintStart_toStartOf="@id/imgEntry"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgEntry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:onClick="onPrintImageEntry"
+        app:layout_constraintBottom_toTopOf="@id/imgResult2"
+        app:layout_constraintEnd_toStartOf="@id/imgResult1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/placa_carro_azul" />
+
+    <TextView
+        android:id="@+id/txtResult1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_result"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/imgResult1"
+        app:layout_constraintStart_toStartOf="@id/imgResult1"
+        app:layout_constraintTop_toTopOf="@id/txtOrigin" />
+
+    <ImageView
+        android:id="@+id/imgResult1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:onClick="onPrintImage1"
+        app:layout_constraintBottom_toBottomOf="@id/imgEntry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgEntry"
+        app:layout_constraintTop_toTopOf="@id/imgEntry"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtResult2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_result"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/imgResult2"
+        app:layout_constraintStart_toStartOf="@id/imgResult2"
+        app:layout_constraintTop_toBottomOf="@id/imgEntry" />
+
+    <ImageView
+        android:id="@+id/imgResult2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:onClick="onPrintImage2"
+        app:layout_constraintBottom_toTopOf="@id/imgResult4"
+        app:layout_constraintEnd_toStartOf="@id/imgResult3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgEntry" />
+
+    <TextView
+        android:id="@+id/txtResult3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_result"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/imgResult3"
+        app:layout_constraintStart_toStartOf="@id/imgResult3"
+        app:layout_constraintTop_toTopOf="@id/txtResult2" />
+
+    <ImageView
+        android:id="@+id/imgResult3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:onClick="onPrintImage3"
+        app:layout_constraintBottom_toBottomOf="@id/imgResult2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgResult2"
+        app:layout_constraintTop_toTopOf="@id/imgResult2" />
+
+
+    <TextView
+        android:id="@+id/txtResult4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_result"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/imgResult4"
+        app:layout_constraintStart_toStartOf="@id/imgResult4"
+        app:layout_constraintTop_toBottomOf="@id/imgResult2" />
+
+    <ImageView
+        android:id="@+id/imgResult4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:onClick="onPrintImage4"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/imgResult6"
+        app:layout_constraintEnd_toStartOf="@id/imgResult5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgResult2" />
+
+    <TextView
+        android:id="@+id/txtResult5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_result"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/imgResult5"
+        app:layout_constraintStart_toStartOf="@id/imgResult5"
+        app:layout_constraintTop_toTopOf="@id/txtResult4" />
+
+    <ImageView
+        android:id="@+id/imgResult5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="onPrintImage5"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/imgResult4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgResult4"
+        app:layout_constraintTop_toTopOf="@+id/imgResult4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtResult6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_result"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/imgResult6"
+        app:layout_constraintStart_toStartOf="@id/imgResult6"
+        app:layout_constraintTop_toBottomOf="@id/imgResult4" />
+
+    <ImageView
+        android:id="@+id/imgResult6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="18dp"
+        android:onClick="onPrintImage6"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imgResult7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgResult4" />
+
+    <TextView
+        android:id="@+id/txtResult7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center"
+        android:text="@string/txt_result"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/imgResult7"
+        app:layout_constraintStart_toStartOf="@+id/imgResult7"
+        app:layout_constraintTop_toTopOf="@id/txtResult6" />
+
+    <ImageView
+        android:id="@+id/imgResult7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="onPrintImage7"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgResult6"
+        app:layout_constraintTop_toTopOf="@+id/imgResult6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

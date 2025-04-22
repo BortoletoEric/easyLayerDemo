@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.gertec.easylayer.app.PrinterActivity">
+
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/printHtmlBtn"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onPrintHtml"
+            android:text="Print HTML"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/printImageBtn"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onPrintImage"
+            android:text="Print Image"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/printHtmlBtn"
+            app:layout_constraintTop_toTopOf="@+id/printHtmlBtn" />
+
+        <Button
+            android:id="@+id/printTextBtn"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onPrintText"
+            android:text="Print Text"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/printImageBtn"
+            app:layout_constraintTop_toTopOf="@+id/printImageBtn" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1">
+
+        <Button
+            android:id="@+id/printTableBtn"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onPrintTable"
+            android:text="Print Table"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/printHtmlBtn" />
+
+        <Button
+            android:id="@+id/printTableBtn3"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onStatus"
+            android:text="Status"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/printHtmlBtn" />
+
+        <Button
+            android:id="@+id/printTableBtn4"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onPrintImageAutoResize"
+            android:text="Print Image Auto Resize"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/printHtmlBtn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2">
+
+        <Button
+            android:id="@+id/printTableBtn5"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onScrollPaper"
+            android:text="Scroll paper"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/printHtmlBtn" />
+
+        <Button
+            android:id="@+id/printComposeBtn"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onPaperUsage"
+            android:text="Paper usage"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@id/printTableBtn"
+            app:layout_constraintTop_toTopOf="@id/printTableBtn" />
+
+        <Button
+            android:id="@+id/printComposeBtn2"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onResetPaperUsage"
+            android:text="Reset Paper Usage"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@id/printTableBtn"
+            app:layout_constraintTop_toTopOf="@id/printTableBtn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCodeView">
+
+        <Button
+            android:id="@+id/printQRCodeBtn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onPrintQrCode"
+            android:text="QR CODE"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="@+id/editCodeView"
+            app:layout_constraintTop_toBottomOf="@+id/editCodeView" />
+
+        <Button
+            android:id="@+id/printAztecBtn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onPrintAztecCode"
+            android:text="AZTEC"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/printQRCodeBtn"
+            app:layout_constraintTop_toTopOf="@+id/printQRCodeBtn" />
+
+        <Button
+            android:id="@+id/printPDF417Btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onPrintPdf417Code"
+            android:text="PDF 417"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/printAztecBtn"
+            app:layout_constraintTop_toTopOf="@+id/printAztecBtn" />
+
+        <Button
+            android:id="@+id/printDataMatrixBtn"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:background="#6CB5EF"
+            android:enabled="false"
+            android:text=""
+            android:layout_weight="1"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/printPDF417Btn"
+            app:layout_constraintTop_toTopOf="@+id/printPDF417Btn" />
+
+        <Button
+            android:id="@+id/printMaxiCodeBtn"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:background="#6CB5EF"
+            android:enabled="true"
+            android:layout_weight="1"
+            android:onClick="onPrintQueue"
+            android:text="Print Queue"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toRightOf="@+id/printDataMatrixBtn"
+            app:layout_constraintTop_toTopOf="@+id/printDataMatrixBtn" />
+
+    </LinearLayout>
+
+
+    <RadioGroup
+        android:id="@+id/printCodeRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#BEDDF6"
+        android:checkedButton="@+id/halfPaperCodeBtn"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/line4"
+        app:layout_constraintStart_toStartOf="@+id/line4"
+        app:layout_constraintTop_toBottomOf="@+id/line4">
+
+        <RadioButton
+            android:id="@+id/smallCodeBtn"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:enabled="true"
+            android:text="SMALL"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/halfPaperCodeBtn"
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:enabled="true"
+            android:text="HALF PAPER"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/fullPaperCodeBtn"
+            android:layout_width="120dp"
+            android:layout_height="20dp"
+            android:enabled="true"
+            android:text="FULL PAPER"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/editCodeView"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:background="#BEDDF6"
+        android:layout_marginTop="32dp"
+        android:editable="true"
+        android:paddingTop="5dp"
+        android:text="www.gertec.com"
+        android:textAlignment="center"
+        android:textColor="#5A5A5C"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/line3"
+        app:layout_constraintLeft_toLeftOf="@+id/printTableBtn"
+        app:layout_constraintStart_toStartOf="@+id/line3"
+        app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+    <TextView
+        android:id="@+id/outputView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#DDDDDD"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/printCodeRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/printCodeRadioGroup" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

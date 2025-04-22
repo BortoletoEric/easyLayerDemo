@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.gertec.easylayer.app.IntensityLevelActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtOrigin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_original"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+
+                app:layout_constraintEnd_toEndOf="@id/imgEntry"
+                app:layout_constraintStart_toStartOf="@id/imgEntry"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgEntry"
+                android:layout_width="140dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:onClick="onPrintImageEntry"
+                app:layout_constraintBottom_toTopOf="@id/imgResult2"
+                app:layout_constraintEnd_toStartOf="@id/imgResult1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/invoice" />
+
+            <TextView
+                android:id="@+id/txtResult1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_result"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/imgResult1"
+                app:layout_constraintStart_toStartOf="@id/imgResult1"
+                app:layout_constraintTop_toTopOf="@id/txtOrigin" />
+
+            <ImageView
+                android:id="@+id/imgResult1"
+                android:layout_width="140dp"
+                android:layout_height="250dp"
+                android:clickable="true"
+                android:onClick="onPrintIntensityLevelImage1"
+                app:layout_constraintBottom_toBottomOf="@id/imgEntry"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgEntry"
+                app:layout_constraintTop_toTopOf="@id/imgEntry"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txtResult2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_result"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/imgResult2"
+                app:layout_constraintStart_toStartOf="@id/imgResult2"
+                app:layout_constraintTop_toBottomOf="@id/imgEntry" />
+
+            <ImageView
+                android:id="@+id/imgResult2"
+                android:layout_width="140dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:onClick="onPrintIntensityLevelImage2"
+                app:layout_constraintEnd_toStartOf="@id/imgResult3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgEntry" />
+
+            <TextView
+                android:id="@+id/txtResult3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_result"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/imgResult3"
+                app:layout_constraintStart_toStartOf="@id/imgResult3"
+                app:layout_constraintTop_toTopOf="@id/txtResult2" />
+
+            <ImageView
+                android:id="@+id/imgResult3"
+                android:layout_width="140dp"
+                android:layout_height="250dp"
+                android:clickable="true"
+                android:onClick="onPrintIntensityLevelImage3"
+                app:layout_constraintBottom_toBottomOf="@id/imgResult2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgResult2"
+                app:layout_constraintTop_toTopOf="@id/imgResult2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

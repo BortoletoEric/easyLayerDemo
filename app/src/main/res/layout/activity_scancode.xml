@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.gertec.easylayer.app.CodeScannerActivity">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/scan1"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#E8B0B0"
+            android:layout_weight="1"
+            android:text="Scan All"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/scan2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/scan2"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:background="#E8B0B0"
+            android:layout_weight="1"
+            android:onClick="onScanQrCode"
+            android:text="Scan QrCode"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/scan3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/scan1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/scan3"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:background="#E8B0B0"
+            android:layout_weight="1"
+            android:onClick="onScanITF"
+            android:text="Scan ITF"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/scan2"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1">
+
+        <Button
+            android:id="@+id/closeScanner"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#E8B0B0"
+            android:layout_weight="1"
+            android:onClick="onScan1D"
+            android:text="SCAN 1D"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/scan3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/scan5"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#E8B0B0"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:onClick="onScan2D"
+            android:text="Scan 2D"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/scan6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scan2" />
+
+        <Button
+            android:id="@+id/scan6"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:background="#E8B0B0"
+            android:layout_weight="1"
+            android:onClick="onScanCustom"
+            android:text="Scan Custom"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/scan5"
+            app:layout_constraintTop_toBottomOf="@+id/scan3" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/line2"
+        app:layout_constraintStart_toStartOf="@+id/line2"
+        app:layout_constraintTop_toBottomOf="@+id/line2">
+
+        <TextView
+            android:id="@+id/outputView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DDDDDD"
+            android:scrollbars="vertical"
+            android:textSize="10sp" />
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
